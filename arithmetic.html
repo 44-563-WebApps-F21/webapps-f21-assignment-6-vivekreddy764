@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>arithmetic.html</title>
+ </head>
+<body>
+
+<form>
+    <h2>computes by Saivivek_Reddy_Kusukuntla</h2>
+   
+    <label for="first_num" class="label">Enter a number </label>
+     <input type="number" id="first_num" class="form-control"
+        value="10" placeholder="Enter a base">
+
+            <label for="Second_num" class="label">Enter Power </label>
+            <input type="number" class="form-control" id="Second_num"
+                value="2" placeholder="Enter an exponent">
+
+                <input type="button" class="btn btn-success btn-md"
+        onclick="powers()" value="Compute">
+    
+         <p class="text-warning" id="result">This text will be replaced</p>
+
+
+    <form>
+    <input type="radio" id="plus" name="operation" onclick="processRadio()" value="plus"> 
+<label for="plus">+</label>
+    </br>
+    <input type="radio" id="minus" name="operation" onclick="processRadio()" value="minus">
+    <label for="minus">-</label>
+    </br>
+    <input type="radio" id="times" name="operation" onclick="processRadio()" value="times">
+    <label for="times">*</label>
+    </br>
+    <input type="radio" id="divide" name="operation" onclick="processRadio()" value="divide">
+    <label for="divide">/</label>
+    </br>   
+    </form>
+
+        <p id="answer" class="text-info">The text will display here</p>
+
+<script> 
+
+let result = " ";
+function powers() {
+
+        base = document.getElementById("first_num").value
+        exponent = document.getElementById("Second_num").value
+
+        var result = "Powers of " + base + " are: "
+        r = 1
+            out = document.getElementById("result")
+
+            for (i = 1; i <= exponent; i++) {
+            r *= base;
+            result+= r+ " "
+            }
+            out.innerHTML = result
+        }
+
+            function processRadio() {
+        base = document.getElementById("first_num").value
+        exponent = document.getElementById("Second_num").value
+        plus = document.getElementById("plus").checked
+        minus = document.getElementById("minus").checked
+        times = document.getElementById("times").checked
+        divide = document.getElementById("divide").checked
+
+            if (plus) {
+            res=0;
+            res=(Number)(base) + (Number)(exponent);
+            document.getElementById("answer").innerHTML = "Sum of " + base + " and " + exponent + " is " + res;
+
+            }
+            if (minus) {
+            res = base - exponent
+            text = "Difference of " + base + " and " + exponent + " is " + res
+            document.getElementById("answer").innerHTML =text;
+
+            }
+            if (times) {
+            document.getElementById("answer").innerHTML = "Product of " + base + " and " + exponent + " is " +
+            base * exponent;
+            }
+            if (divide) {
+            document.getElementById("answer").innerHTML = "Division of " + base + " and " + exponent + " is " +
+            base / exponent;
+    }
+}
+
+</script>
+
+</body>
+</html> 
