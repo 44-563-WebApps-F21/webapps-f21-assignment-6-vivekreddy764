@@ -41,7 +41,7 @@
             
              <p class="text-success" id="result">This text will be replaced </p>
     
-             <button onclick="location.reload();">Hit here! for clear Results</button><hr>
+             <button onclick="location.reload();"><span class="spinner-grow spinner-grow-sm"></span>Hit here! for clear Results</button><hr>
         </form>
         <div id="container">
 <img id="Cobra" src="Kobra.jpg" alt="Cobra" width="200" height="200" onclick="newImage()">
@@ -71,9 +71,16 @@ function processPhrase (){
         wrong += 1
         out.innerHTML = "correct : " + correct + " " + "wrong : " + wrong
         alert("Access denied.")
+        if(counterN >= 3){
+            if(wrong >=3){
+                incorrectPassphrase()
+            }
+        }
     }
 }
-
+function incorrectPassphrase(){
+    alert("account locked")
+}
 var currentimage = 1;
 
 function newImage() {
