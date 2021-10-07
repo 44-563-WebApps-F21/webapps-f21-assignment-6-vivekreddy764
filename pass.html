@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>pass.html</title>
+ </head>
+<body>
+
+<h2>Pass phrase by Pass_phrase_by_Saivivek_Reddy_Kusukuntla</h2>
+
+
+    <form>
+        <label for="secret phrase" class="col-md-3 col-form-label">Type your Phrase</label>
+    
+        <input type="password" class="form-control" placeholder="Enter the secret phrase" id="form1_password" value="Let me in">
+    
+          <label for="Phrase" class="col-md-3 col-form-label">Enter a Phrase: </label>
+                    
+             <input type="text" class="form-control" placeholder="Enter a phrase" required id="form1_Phrase">
+            <br>
+            <input class="btn-success" type="button " onclick="processPhrase()" value="Check the Phrase">
+            
+             <p class="text-success" id="result">This text will be replaced </p>
+    
+             <button onclick="location.reload();">Hit here! for clear Results</button><hr>
+        </form>
+
+<img id="Cobra" src="Kobra.jpg" alt="Cobra" width="200" height="200" onclick="newImage()">
+
+
+<script> 
+
+let correct = 0;
+        let wrong = 0;
+     var counterP= 0;
+        var counterN= 0;
+function processPhrase (){
+
+    console.log("Getting form values")
+    password = document.getElementById("form1_password").value
+    Phrase = document.getElementById("form1_Phrase").value
+    
+    out = document.getElementById("result")
+    if(password == Phrase){
+        counterN=0 ;
+        correct += 1
+        out.innerHTML = "correct : " + correct + " " + "wrong : " + wrong
+        alert("Access allowed.")
+    } else {
+        counterN ++;
+        wrong += 1
+        out.innerHTML = "correct : " + correct + " " + "wrong : " + wrong
+        alert("Access denied.")
+    }
+}
+
+var currentimage = 1;
+
+function newImage() {
+        switch (currentimage) {
+            case 0:
+                currentImage = currentimage + 1;
+                document.getElementById("Cobra").src = "Kobra.jpg"
+                break;
+            case 1:
+                currentimage += 1;
+                document.getElementById("Cobra").src = "Salmon.jpg"
+                break;
+            case 2:
+                currentimage += 1;
+                document.getElementById("Cobra").src = "urial.jpg"
+                break;
+            default:
+                currentimage = 1
+                document.getElementById("Cobra").src = "Kobra.jpg"
+        }
+    }
+</script>
+
+</body>
+</html> 
