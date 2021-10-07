@@ -4,42 +4,75 @@
      <title>
          car.html
      </title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
-<body>
-
-
-    
-     <form> 
-       
-                 <h2>orders a car by Saivivek_Reddy_Kusukuntla</h2>
- 
-             <label for="car_electric"> electric </label>
-        <input type="checkbox"  class="form-checkbox" id="car_electric" name="electric" value=electric>
-          
-         <label for="car_ac"> ac </label>
-            <input type="checkbox" class="form-checbox" id="car_ac" name="ac" value=ac>
-         
-            <label for="car_gps"> gps</label>
-         <input type="checkbox" class="form-checkbox" id="car_gps" name="gps" value="gps"> 
-
-        <input type="button" class="btn btn-primary btn-md" onclick="orderCar()" value="Order a car">
-                                         
-        <p id="result" class="text-warning">This text will be replaced </p>
-                
-     <form>
-        <label for="property"> Enter a property </label>
-             <input type="text" id="property" class="form-control" name="property" value="color">
-                
-        <label for="value"> Enter a value </label>
-            <input type="text" class="form-control" id="value" name="value">
-            
-        <input type="button" class="btn btn-primary btn-md" onclick="updateCar()" value="Update the car">
-            
+<body style="background-color: rgb(255, 243, 228);">
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark and bg-secondary">
+            <a class="navbar-brand" href="car.html" target="_self">car page</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="pass.html" target="_self">pass</a></li>
+                    <li class="nav-item active"> <a class="nav-link" href="arithmetic.html" target="_self">arithmetic</a></li>
+          </nav>
+        </div>
+        <div class="container">
+            <form> 
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 pt-3">
+                            <h1 class="display-4">Hey You are in car.html page</h1><hr>
+                            <h2>orders a car by Saivivek_Reddy_Kusukuntla</h2>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                <label for="car_electric"> electric </label>
+                                <input type="checkbox"  class="form-checkbox" id="car_electric" name="electric" value=electric>
+                            </div>
+                            <div class="form-group">
+                                    <label for="car_ac"> ac </label>
+                                    <input type="checkbox" class="form-checbox" id="car_ac" name="ac" value=ac>
+                                </div>
+                                <div class="form-group">
+                                <label for="car_gps"> gps</label>
+                                    <input type="checkbox" class="form-checkbox" id="car_gps" name="gps" value="gps"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" class="btn btn-primary btn-md" onclick="orderCar()" value="Order a car">
+                                </div>
+                            </div>
+                        </div>
+                            <p id="result" class="text-warning">This text will be replaced </p>
+                    </div>
+                        <div class="col-md-12"> 
+                                <form>
+                                <div class="form-group"></div>
+                         <label for="property"> Enter a property </label>
+                         <input type="text" id="property" class="form-control" name="property" value="color">
+                                </div>
+                                <div class="form-group">
+                            <label for="value"> Enter a value </label>
+                                 <input type="text" class="form-control" id="value" name="value">
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" class="btn btn-primary btn-md" onclick="updateCar()" value="Update the car">
+                                </div>
+                                     </form>
+                                     <p id="result2" class="text-danger">This text will be replaced </p>
+                                     <hr>
+                                     <button onclick="location.reload();"><span class="spinner-grow spinner-grow-sm"></span>Hit here! for clear Results</button>
+                                         </div>
+                 </div>
+            </div>
         </form>
-    <p id="result2" class="text-danger">This text will be replaced </p>
-                
-</form>
-        
+    </div>
         
 <script> 
         
